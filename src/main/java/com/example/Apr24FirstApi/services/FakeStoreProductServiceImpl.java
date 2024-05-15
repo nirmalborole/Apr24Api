@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
-@Service
+@Service("fakeStore")
 public class FakeStoreProductServiceImpl implements ProductService{
     private RestTemplate restTemplate;
     @Autowired
@@ -40,4 +40,25 @@ public class FakeStoreProductServiceImpl implements ProductService{
     public List<Product> getAllProducts() {
         return null;
     }
+
+    @Override
+    public Product createPeroduct(String title, String description, String image, double price, String categoryName) {
+        return null;
+    }
+
+    @Override
+    public Product updatePrice(long productId, double updatePrice) {
+        return null;
+    }
+
+    @Override
+    public Product updateImage(long productId, double updateImage) {
+        return null;
+    }
+
+    @Override
+    public boolean deleteProduct() {
+        return false;
+    }
+
 }
